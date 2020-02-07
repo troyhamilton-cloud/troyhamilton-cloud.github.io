@@ -3,22 +3,88 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://troyhamilton-cloud.github.io/posts/2020/01/a-world-of-hellos/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <loc>https://troyhamilton-cloud.github.io/categories/</loc>
+    <lastmod>2020-01-04T07:54:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/categories/linux/</loc>
+    <lastmod>2020-01-04T07:54:43-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://troyhamilton-cloud.github.io/posts/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-04T07:54:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/tags/pscp/</loc>
+    <lastmod>2020-01-04T07:54:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/posts/2020/01/pscp-and-psftp-are-your-friends/</loc>
+    <lastmod>2020-01-04T07:54:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/tags/psftp/</loc>
+    <lastmod>2020-01-04T07:54:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/tags/</loc>
+    <lastmod>2020-01-04T07:54:43-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://troyhamilton-cloud.github.io/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-04T07:54:43-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://troyhamilton-cloud.github.io/categories/</loc>
+    <loc>https://troyhamilton-cloud.github.io/posts/2020/01/all-the-hugs-for-hugo/</loc>
+    <lastmod>2020-01-03T13:52:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/categories/blog/</loc>
+    <lastmod>2020-01-03T13:52:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/tags/hugo/</loc>
+    <lastmod>2020-01-03T13:52:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/tags/aws/</loc>
+    <lastmod>2020-01-02T13:52:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/categories/cloud/</loc>
+    <lastmod>2020-01-02T13:52:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/tags/ec2/</loc>
+    <lastmod>2020-01-02T13:52:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/posts/2020/01/fun-with-aws-ec2-and-putty/</loc>
+    <lastmod>2020-01-02T13:52:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/posts/2020/01/a-world-of-hellos/</loc>
+    <lastmod>2020-01-01T01:54:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton-cloud.github.io/tags/hello/</loc>
+    <lastmod>2020-01-01T01:54:43-05:00</lastmod>
   </url>
   
   <url>
@@ -27,10 +93,6 @@
   
   <url>
     <loc>https://troyhamilton-cloud.github.io/resume/</loc>
-  </url>
-  
-  <url>
-    <loc>https://troyhamilton-cloud.github.io/tags/</loc>
   </url>
   
 </urlset>

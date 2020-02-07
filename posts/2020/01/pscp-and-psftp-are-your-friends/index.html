@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Troy Hamilton ">
+<meta name="description" content="As magical as Hugo is, I couldn&amp;rsquo;t get the github deployment to work cleanly no matter how much I followed the official deployment guide on Windows 10 1809. When adding the submodule for the blog repo, this error kept pestering me:
+&#39;public&#39; does not have a commit checked out All google-fu points to git v2.25.0.windows.1 and hugo extended v0.63.2 not being happy with each other. Luckily I have a CentOS vm that I&amp;rsquo;ve been using for my RHCSA labs and deploying my hugo blog to github ran clean with no errors." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://troyhamilton-cloud.github.io/posts/2020/01/pscp-and-psftp-are-your-friends/" />
+
+
+    <title>
+        
+            pscp and psftp are your friends :: Troy Hamilton 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://troyhamilton-cloud.github.io/main.min.5dcefbf8102eb536dd3e2de53ffebfa58599ab2435c241a0db81728a5e015f2e.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://troyhamilton-cloud.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://troyhamilton-cloud.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://troyhamilton-cloud.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://troyhamilton-cloud.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://troyhamilton-cloud.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://troyhamilton-cloud.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+<meta itemprop="name" content="pscp and psftp are your friends">
+<meta itemprop="description" content="As magical as Hugo is, I couldn&rsquo;t get the github deployment to work cleanly no matter how much I followed the official deployment guide on Windows 10 1809. When adding the submodule for the blog repo, this error kept pestering me:
+&#39;public&#39; does not have a commit checked out All google-fu points to git v2.25.0.windows.1 and hugo extended v0.63.2 not being happy with each other. Luckily I have a CentOS vm that I&rsquo;ve been using for my RHCSA labs and deploying my hugo blog to github ran clean with no errors.">
+<meta itemprop="datePublished" content="2020-01-04T07:54:43-05:00" />
+<meta itemprop="dateModified" content="2020-01-04T07:54:43-05:00" />
+<meta itemprop="wordCount" content="342">
+<meta itemprop="image" content="https://troyhamilton-cloud.github.io"/>
+
+
+
+<meta itemprop="keywords" content="pscp,psftp," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://troyhamilton-cloud.github.io"/>
+
+<meta name="twitter:title" content="pscp and psftp are your friends"/>
+<meta name="twitter:description" content="As magical as Hugo is, I couldn&rsquo;t get the github deployment to work cleanly no matter how much I followed the official deployment guide on Windows 10 1809. When adding the submodule for the blog repo, this error kept pestering me:
+&#39;public&#39; does not have a commit checked out All google-fu points to git v2.25.0.windows.1 and hugo extended v0.63.2 not being happy with each other. Luckily I have a CentOS vm that I&rsquo;ve been using for my RHCSA labs and deploying my hugo blog to github ran clean with no errors."/>
+
+
+
+    <meta property="article:section" content="linux" />
+
+
+
+    <meta property="article:published_time" content="2020-01-04 07:54:43 -0500 EST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://troyhamilton-cloud.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">troyhamilton.cloud</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://troyhamilton-cloud.github.io/posts/">blog</a></li><li><a href="https://troyhamilton-cloud.github.io/connect/">connect</a></li><li><a href="https://troyhamilton-cloud.github.io/resume/">resume</a></li><li><a href="https://troyhamilton-cloud.github.io/tags/">tags</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://troyhamilton-cloud.github.io/posts/2020/01/pscp-and-psftp-are-your-friends/">pscp and psftp are your friends</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p>As magical as Hugo is, I couldn&rsquo;t get the github deployment to work cleanly no matter how much I followed the official deployment guide on Windows 10 1809.  When adding the submodule for the blog repo, this error kept pestering me:</p>
+<pre><code>'public' does not have a commit checked out
+</code></pre><p>All google-fu points to git v2.25.0.windows.1 and hugo extended v0.63.2 not being happy with each other.  Luckily I have a CentOS vm that I&rsquo;ve been using for my RHCSA labs and deploying my hugo blog to github ran clean with no errors.  I didn&rsquo;t really want to retype some of the posts that I had in draft and there doesn&rsquo;t appear to be native clipboard support in Hyper-V.</p>
+<p>puTTy and friends to the rescue!  Put your reading glasses on and have a gander (here)[https://www.putty.org].  If you&rsquo;re on Windows and install the full package, two of the hidden treasures in the puTTy box are pscp and psftp.  They do have some slight differences in syntax and I&rsquo;ve read in some places that only psftp supports SSLv2 but after running some Wireshark and tcpdump captures it looks like both of them do.  I prefer psftp but there are use cases for both.  With either utility, I&rsquo;ll assume that you&rsquo;re already added root path of the binaries to your %PATH% environment variable,  otherwise just navigate to them.  If in doubt, echo %PATH%.</p>
+<p>This is a very, very small and scaled down list of the commands available for both, for a comprehensive list check out (this cool guide)[https://ssh.com/ssh/putty/putty-manual/0.68/index.html] at ssh.com.  Props to the team that put together the documentation.</p>
+<hr>
+<h1 id="psftp">PSFTP</h1>
+<ul>
+<li>Connect to the host.  This will drop you into a <strong>psftp&gt;</strong> prompt</li>
+</ul>
+<pre><code>psftp user@host
+</code></pre><ul>
+<li>Print remote directory</li>
+</ul>
+<pre><code>pwd
+Current directory is /home/user
+</code></pre><ul>
+<li>Print local directory</li>
+</ul>
+<pre><code>lpwd
+Current local directory is C:\users\user\Documents
+</code></pre><ul>
+<li>Change remote directory</li>
+</ul>
+<pre><code>cd /usr/local/bin
+Remote directory is now /usr/local/bin
+</code></pre><ul>
+<li>List remote directory</li>
+</ul>
+<pre><code>ls
+List direcotory /usr/local/bin
+</code></pre><ul>
+<li>Copy a file from local to remote</li>
+</ul>
+<pre><code>put file
+local:file =&gt;remote:/usr/local/bin/file
+</code></pre><ul>
+<li>Copy a file from remote to local</li>
+</ul>
+<pre><code>get file
+remote:/usr/local/bin/file =&gt; local:file
+</code></pre><ul>
+<li>Exit psftp</li>
+</ul>
+<pre><code>quit or exit
+</code></pre><h1 id="pscp">PSCP</h1>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://troyhamilton-cloud.github.io/tags/pscp">pscp</a></span><span class="tag"><a href="https://troyhamilton-cloud.github.io/tags/psftp">psftp</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>342 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-01-04 07:54 -0500</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://troyhamilton-cloud.github.io/posts/2020/01/all-the-hugs-for-hugo/">
+                                <span class="button__text">All the hugs for Hugo</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://troyhamilton-cloud.github.io">Troy Hamilton</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://troyhamilton-cloud.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://troyhamilton-cloud.github.io/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+
+
+
+    </body>
+</html>
