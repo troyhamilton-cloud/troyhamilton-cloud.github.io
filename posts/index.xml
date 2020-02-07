@@ -1,0 +1,32 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Troy Hamilton</title>
+        <link>https://troyhamilton-cloud.github.io/posts/</link>
+        <description>Recent content in Posts on Troy Hamilton</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://troyhamilton-cloud.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>A world of hellos</title>
+            <link>https://troyhamilton-cloud.github.io/posts/2020/01/a-world-of-hellos/</link>
+            <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://troyhamilton-cloud.github.io/posts/2020/01/a-world-of-hellos/</guid>
+            <description>Step 1. Introduce yourself Hi! I&amp;rsquo;m Troy.
+Step 2. Say something about yourself Something about yourself
+Step 3. Tell a joke Q: Where do astronauts like to get a drink?
+A: At the space bar. #dadjokes</description>
+            <content type="html"><![CDATA[<h3 id="step-1-introduce-yourself">Step 1. Introduce yourself</h3>
+<p>Hi!  I&rsquo;m Troy.</p>
+<h3 id="step-2-say-something-about-yourself">Step 2. Say something about yourself</h3>
+<p><em>Something about yourself</em></p>
+<h3 id="step-3--tell-a-joke">Step 3.  Tell a joke</h3>
+<p>Q: Where do astronauts like to get a drink?</p>
+<p>A: At the <em>space bar</em>. #dadjokes</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

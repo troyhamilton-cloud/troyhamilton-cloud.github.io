@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Troy Hamilton</title>
+    <link>https://troyhamilton-cloud.github.io/</link>
+    <description>Recent content on Troy Hamilton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://troyhamilton-cloud.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A world of hellos</title>
+      <link>https://troyhamilton-cloud.github.io/posts/2020/01/a-world-of-hellos/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://troyhamilton-cloud.github.io/posts/2020/01/a-world-of-hellos/</guid>
+      <description>Step 1. Introduce yourself Hi! I&amp;rsquo;m Troy.
+Step 2. Say something about yourself Something about yourself
+Step 3. Tell a joke Q: Where do astronauts like to get a drink?
+A: At the space bar. #dadjokes</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s connect!</title>
+      <link>https://troyhamilton-cloud.github.io/connect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://troyhamilton-cloud.github.io/connect/</guid>
+      <description>troy.d.hamilton@comcast.net </description>
+    </item>
+    
+    <item>
+      <title>Some things I&#39;ve done</title>
+      <link>https://troyhamilton-cloud.github.io/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://troyhamilton-cloud.github.io/resume/</guid>
+      <description>AWS CERTIFIED SOLUTIONS ARCHITECT ASSOCIATE CISCO CERTIFIED NETWORK PROFESSIONAL CCNP (SWITCH Only) CISCO CERTIFIED NETWORK ASSOCIATE CCNA MICROSOFT CERTIFIED SYSTEMS ENGINEER MCSE B.S. INFORMATION SECURITY  DIRECTOR OF INFRASTRUCTURE AND CLOUD SERVICES | JULY 2015 TO PRESENT  Responsible for entire IT infrastructure and key principal in data operations for nationwide client base In-depth monitoring, maintenance, and capacity planning for virtual machines, storage, networking, applications, databases, and security Provides leadership and support for the development team on legacy, current, and planned software development projects Engages strongly with project management team for on boarding of new clients and accompanying project requirements Developed, tested, and deployed new RESTful microservices and API methodologies for gaining greater visibility into client side integrations Key points of interest: ASP.</description>
+    </item>
+    
+  </channel>
+</rss>
