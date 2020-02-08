@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on Troy Hamilton</title>
-    <link>https://troyhamilton-cloud.github.io/tags/hugo/</link>
+    <link>https://troyhamilton.cloud/tags/hugo/</link>
     <description>Recent content in hugo on Troy Hamilton</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Fri, 03 Jan 2020 13:52:23 -0500</lastBuildDate>
     
-	<atom:link href="https://troyhamilton-cloud.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://troyhamilton.cloud/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>All the hugs for Hugo</title>
-      <link>https://troyhamilton-cloud.github.io/posts/2020/01/all-the-hugs-for-hugo/</link>
+      <link>https://troyhamilton.cloud/posts/2020/01/all-the-hugs-for-hugo/</link>
       <pubDate>Fri, 03 Jan 2020 13:52:23 -0500</pubDate>
       
-      <guid>https://troyhamilton-cloud.github.io/posts/2020/01/all-the-hugs-for-hugo/</guid>
+      <guid>https://troyhamilton.cloud/posts/2020/01/all-the-hugs-for-hugo/</guid>
       <description>I am not a front end developer&amp;hellip;
 14 years in IT, I regret not learning more html/css/js. That negligence has brought me to this point.
 There&amp;rsquo;s a big difference between working with html files hosted in a load balanced IIS cluster versus building a site from scratch, tweaking it, making it look good, etc.

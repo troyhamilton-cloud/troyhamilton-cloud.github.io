@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cloud on Troy Hamilton</title>
-    <link>https://troyhamilton-cloud.github.io/categories/cloud/</link>
+    <link>https://troyhamilton.cloud/categories/cloud/</link>
     <description>Recent content in cloud on Troy Hamilton</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 02 Jan 2020 13:52:16 -0500</lastBuildDate>
     
-	<atom:link href="https://troyhamilton-cloud.github.io/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://troyhamilton.cloud/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fun with AWS EC2 and puTTy</title>
-      <link>https://troyhamilton-cloud.github.io/posts/2020/01/fun-with-aws-ec2-and-putty/</link>
+      <link>https://troyhamilton.cloud/posts/2020/01/fun-with-aws-ec2-and-putty/</link>
       <pubDate>Thu, 02 Jan 2020 13:52:16 -0500</pubDate>
       
-      <guid>https://troyhamilton-cloud.github.io/posts/2020/01/fun-with-aws-ec2-and-putty/</guid>
+      <guid>https://troyhamilton.cloud/posts/2020/01/fun-with-aws-ec2-and-putty/</guid>
       <description>In preparation for SAA-C01 I wanted to start looking into moving my site from Github+Netlify to EC2+S3+Jenkins. So I go to ssh into my free-tier instance from PuTTy on win10 and I get:
 No supported authentication methods available (server sent: publickey,gssapi-keyex,gssapi-with-mic Interesting, but ok, let&amp;rsquo;s see what&amp;rsquo;s wrong. So I login to aws console and verify my ec2 instance is running. The green dot means running right :). But we&amp;rsquo;re architects/engineers/sysops/devops so we do things in cli right?</description>
     </item>
