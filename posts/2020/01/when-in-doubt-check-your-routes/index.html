@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Troy Hamilton ">
+<meta name="description" content="One of the cool things you can do when launching aws ec2 instances is add a configuration script that will run during launch. From the launch configuration wizard, this script is on the &amp;lsquo;Configure Instance Details&amp;rsquo; step under &amp;lsquo;Advanced Details&amp;rsquo;. A common script that I&amp;rsquo;ve been using lately with all of my labs is installing, starting, and enabling the apache web server aka httpd.
+#!/bin/bash sudo yum update -y sudo yum install -y httpd php sudo systemctl start httpd sudo systemctl enable httpd This is just a batch script that will update yum, install apache and php, start the httpd daemon and enable it to start on next boot." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://troyhamilton.cloud/posts/2020/01/when-in-doubt-check-your-routes/" />
+
+
+    <title>
+        
+            When in doubt, check your routes :: Troy Hamilton 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://troyhamilton.cloud/main.min.5dcefbf8102eb536dd3e2de53ffebfa58599ab2435c241a0db81728a5e015f2e.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://troyhamilton.cloud/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://troyhamilton.cloud/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://troyhamilton.cloud/favicon-16x16.png">
+    <link rel="manifest" href="https://troyhamilton.cloud/site.webmanifest">
+    <link rel="mask-icon" href="https://troyhamilton.cloud/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://troyhamilton.cloud/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+<meta itemprop="name" content="When in doubt, check your routes">
+<meta itemprop="description" content="One of the cool things you can do when launching aws ec2 instances is add a configuration script that will run during launch. From the launch configuration wizard, this script is on the &lsquo;Configure Instance Details&rsquo; step under &lsquo;Advanced Details&rsquo;. A common script that I&rsquo;ve been using lately with all of my labs is installing, starting, and enabling the apache web server aka httpd.
+#!/bin/bash sudo yum update -y sudo yum install -y httpd php sudo systemctl start httpd sudo systemctl enable httpd This is just a batch script that will update yum, install apache and php, start the httpd daemon and enable it to start on next boot.">
+<meta itemprop="datePublished" content="2020-01-04T07:54:43-05:00" />
+<meta itemprop="dateModified" content="2020-01-04T07:54:43-05:00" />
+<meta itemprop="wordCount" content="654">
+<meta itemprop="image" content="https://troyhamilton.cloud"/>
+
+
+
+<meta itemprop="keywords" content="aws,vpc," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://troyhamilton.cloud"/>
+
+<meta name="twitter:title" content="When in doubt, check your routes"/>
+<meta name="twitter:description" content="One of the cool things you can do when launching aws ec2 instances is add a configuration script that will run during launch. From the launch configuration wizard, this script is on the &lsquo;Configure Instance Details&rsquo; step under &lsquo;Advanced Details&rsquo;. A common script that I&rsquo;ve been using lately with all of my labs is installing, starting, and enabling the apache web server aka httpd.
+#!/bin/bash sudo yum update -y sudo yum install -y httpd php sudo systemctl start httpd sudo systemctl enable httpd This is just a batch script that will update yum, install apache and php, start the httpd daemon and enable it to start on next boot."/>
+
+
+
+    <meta property="article:section" content="cloud" />
+
+
+
+    <meta property="article:published_time" content="2020-01-04 07:54:43 -0500 EST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://troyhamilton.cloud/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">troyhamilton.cloud</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://troyhamilton.cloud/posts/">_blog</a></li><li><a href="https://troyhamilton.cloud/connect/">_connect</a></li><li><a href="https://troyhamilton.cloud/resume/">_resume</a></li><li><a href="https://troyhamilton.cloud/tags/">_tags</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://troyhamilton.cloud/posts/2020/01/when-in-doubt-check-your-routes/">When in doubt, check your routes</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p>One of the cool things you can do when launching aws ec2 instances is add a configuration script that will run during launch.  From the launch configuration wizard, this script is on the &lsquo;Configure Instance Details&rsquo; step under &lsquo;Advanced Details&rsquo;.  A common script that I&rsquo;ve been using lately with all of my labs is installing, starting, and enabling the apache web server aka httpd.</p>
+<p><img src="https://troyhamilton.cloud/images/ec2-user-data-section.png" alt="user data"></p>
+<pre><code>#!/bin/bash
+sudo yum update -y
+sudo yum install -y httpd php
+sudo systemctl start httpd
+sudo systemctl enable httpd
+</code></pre><p>This is just a batch script that will update yum, install apache and php, start the httpd daemon and enable it to start on next boot.  I&rsquo;ve probably done it a hundred times by now&hellip;</p>
+<p>So I&rsquo;m getting ready to test an application load balancer lab that I&rsquo;ve been working on but the default apache site for my bastion host isn&rsquo;t working.</p>
+<p>First let&rsquo;s check to make sure the service is running</p>
+<pre><code>ec2-user@ip-10-0-1-13 ~$ service httpd status
+Redirecting to /bin/systemctl status httpd.service
+Unit httpd.service could not be found.
+</code></pre><p>Say what now?
+But the stuff.  And the things.</p>
+<p>The logs for the ec2 launch can be found in /var/log/cloud-init.log so let&rsquo;s check it out.</p>
+<pre><code>[ec2-user@ip-10-0-1-13 log]$ sudo less cloud-init-output.log
+
+Feb 08 22:17:28 cloud-init[3070]: __init__.py[WARNING]: Unhandled non-multipart (text/x-not-multipart) userdata: 'sudo yum update -y...'
+Cloud-init v. 18.5-2.amzn2 running 'modules:config' at Sat, 08 Feb 2020 22:17:29 +0000. Up 12.86 seconds.
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+
+
+ One of the configured repositories failed (Unknown),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work &quot;fix&quot; this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=&lt;repoid&gt; ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable &lt;repoid&gt;
+        or
+            subscription-manager repos --disable=&lt;repoid&gt;
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=&lt;repoid&gt;.skip_if_unavailable=true
+
+Cannot find a valid baseurl for repo: amzn2-core/2/x86_64
+Could not retrieve mirrorlist http://amazonlinux.us-east-1.amazonaws.com/2/core/latest/x86_64/mirror.list error was
+12: Timeout on http://amazonlinux.us-east-1.amazonaws.com/2/core/latest/x86_64/mirror.list: (28, 'Connection timed out after 5000 milliseconds')
+Feb 08 22:20:14 cloud-init[3215]: util.py[WARNING]: Package upgrade failed
+Feb 08 22:20:14 cloud-init[3215]: cc_package_update_upgrade_install.py[WARNING]: 1 failed with exceptions, re-raising the last one
+Feb 08 22:20:14 cloud-init[3215]: util.py[WARNING]: Running module package-update-upgrade-install (&lt;module 'cloudinit.config.cc_package_update_upgrade_install' from '/usr/lib/python2.7/site-packages/cloudinit/config/cc_package_update_upgrade_install.pyc'&gt;) failed
+Cloud-init v. 18.5-2.amzn2 running 'modules:final' at Sat, 08 Feb 2020 22:20:15 +0000. Up 178.44 seconds.
+Cloud-init v. 18.5-2.amzn2 finished at Sat, 08 Feb 2020 22:20:15 +0000. Datasource DataSourceEc2.  Up 178.62 seconds
+(END)
+</code></pre><p>Looks like yum couldn&rsquo;t install httpd because it couldn&rsquo;t find a valid baseurl?  Is yum corrupt?  Is my ami jacked?</p>
+<p>So let&rsquo;s just try to install apache now.  Try being the keyword here because as it turns out we can&rsquo;t reach any repo or any webs.</p>
+<p>Remember, a vpc needs an internet gateway.  An internet gateway needs a route table.  A route table needs a route, more specifically a default route.  When you create a route table the only route included is the local route for the cidr block of your vpc, well that doesn&rsquo;t do you any good for any hosts outside of that private subnet.  You still need a default route of 0.0.0.0/0 pointing to the internet gateway.  Attention to detail bro&hellip;</p>
+<p><img src="https://troyhamilton.cloud/images/vpc-route-table-default-route.png" alt="default route"></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://troyhamilton.cloud/tags/aws">aws</a></span><span class="tag"><a href="https://troyhamilton.cloud/tags/vpc">vpc</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>654 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-01-04 07:54 -0500</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://troyhamilton.cloud/posts/2020/01/pscp-and-psftp-are-your-friends/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">pscp and psftp are your friends</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://troyhamilton.cloud/posts/2020/01/all-the-hugs-for-hugo/">
+                                <span class="button__text">All the hugs for Hugo</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://troyhamilton.cloud">Troy Hamilton</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://troyhamilton.cloud/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://troyhamilton.cloud/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+
+
+
+    </body>
+</html>

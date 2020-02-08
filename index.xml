@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>When in doubt, check your routes</title>
+      <link>https://troyhamilton.cloud/posts/2020/01/when-in-doubt-check-your-routes/</link>
+      <pubDate>Sat, 04 Jan 2020 07:54:43 -0500</pubDate>
+      
+      <guid>https://troyhamilton.cloud/posts/2020/01/when-in-doubt-check-your-routes/</guid>
+      <description>One of the cool things you can do when launching aws ec2 instances is add a configuration script that will run during launch. From the launch configuration wizard, this script is on the &amp;lsquo;Configure Instance Details&amp;rsquo; step under &amp;lsquo;Advanced Details&amp;rsquo;. A common script that I&amp;rsquo;ve been using lately with all of my labs is installing, starting, and enabling the apache web server aka httpd.
+#!/bin/bash sudo yum update -y sudo yum install -y httpd php sudo systemctl start httpd sudo systemctl enable httpd This is just a batch script that will update yum, install apache and php, start the httpd daemon and enable it to start on next boot.</description>
+    </item>
+    
+    <item>
       <title>All the hugs for Hugo</title>
       <link>https://troyhamilton.cloud/posts/2020/01/all-the-hugs-for-hugo/</link>
       <pubDate>Fri, 03 Jan 2020 13:52:23 -0500</pubDate>
