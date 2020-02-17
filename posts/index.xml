@@ -5,8 +5,71 @@
         <description>Recent content in Posts on Troy Hamilton</description>
         <generator>Hugo -- gohugo.io</generator>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 04 Jan 2020 07:54:43 -0500</lastBuildDate>
+        <lastBuildDate>Sun, 16 Feb 2020 10:36:53 -0500</lastBuildDate>
         <atom:link href="https://troyhamilton.cloud/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>This post is brought to you by the letters NSA</title>
+            <link>https://troyhamilton.cloud/posts/2020/02/this-post-is-brought-to-you-by-the-letters-nsa/</link>
+            <pubDate>Sun, 16 Feb 2020 10:36:53 -0500</pubDate>
+            
+            <guid>https://troyhamilton.cloud/posts/2020/02/this-post-is-brought-to-you-by-the-letters-nsa/</guid>
+            <description>In 1997 I recall my VB6 college professor Mr. Shroff asked us to name a programming language. At the time I was studying for my AA in Electronic Engineering but I was also working at CompUSA which is probably the best job I ever had. It was the catalyst for me into IT. Anyway, Mr. Shroff looks at me, asks me to name a language, and after a brief moment I remember chatting with Brandon at the upgrades counter at work and his new jump on Python.</description>
+            <content type="html"><![CDATA[<p>In 1997 I recall my VB6 college professor <a href="https://www.absolutedental.com/doctor/sulabh-shroff/">Mr. Shroff</a> asked us to name a programming language.  At the time I was studying for my AA in Electronic Engineering but I was also working at CompUSA which is probably the best job I ever had.  It was the catalyst for me into IT.  Anyway, Mr. Shroff looks at me, asks me to name a language, and after a brief moment I remember chatting with Brandon at the upgrades counter at work and his new jump on Python.  &lsquo;Great language, very powerful&rsquo; he exclaims and my dumbass should&rsquo;ve picked up on that.  But hey VB6 wasn&rsquo;t all that bad right?  Alas, here we are.</p>
+<p>If you haven&rsquo;t seen it yet, thanks to a FOIA submitted by <a href="https://twitter.com/chris_swenson/status/1225836060938125313">@chris_swenson</a>, the NSA has unclassified it&rsquo;s COMP3321 course on Python.  Thanks Chris!</p>
+<p>The ocr&rsquo;d pdf is 395 pages of 30+ lessons or sections.  The material is designed to be covered in a 2 week period if the user allots themselves about an hour per lesson.  Barring any interruptions, I hope to complete it by the end of February with week 1 starting today.</p>
+<p>This post should be read in the context of me just chatting with someone at the bar about the course and not actually teaching about Python or programming.  However, if you&rsquo;re new to programming and have somehow fumbled your way into my cozy little spot here then please listen to me when I say, learn Python!  Trust me, it will open many doors for you.</p>
+<p>Moving on!</p>
+<p>Here&rsquo;s the breakdown for Week 1:</p>
+<ul>
+<li>Lesson 01: Intro to Python</li>
+<li>Lesson 02: Variables and Functions</li>
+<li>Lesson 03: Flow Control</li>
+<li>Lesson 04: Container Data Types</li>
+<li>Lesson 05: File Input and Output</li>
+<li>Lesson 06: Development Environment and Tooling</li>
+<li>Lesson 07: Object Orienteering: Using Classes</li>
+<li>Lesson 08: Modules, Namespaces, and Packages</li>
+<li>Lesson 09: Exceptions, Profiling, and Testing</li>
+<li>Lesson 10: Iterators, Generators, and Duck Typing</li>
+<li>Lesson 11: String Formatting</li>
+</ul>
+<p>As with most Python tutorials, Week 1 begins with an introduction which calls for an installation of <a href="https://www.anaconda.com/distribution/">Anaconda</a>, specifically version 4.4.0.  Anaconda is one of the largest Python distributions that give you access to all the libraries, dependencies, packages, and environments that you&rsquo;ll need for this lesson and probably any project a beginner would be involved in.</p>
+<hr>
+<h1 id="lesson01">Lesson01</h1>
+<p>So what&rsquo;s covered in Lesson 01?  It starts off with &lsquo;Basic Basics: Data and Operations&rsquo; and explaining basic data types such as integers, floats, complexes, strings, and booleans.  We perform data operations against data types with operators, functions, and methods.</p>
+<p>I like how they make a distinction between functions and methods:</p>
+<blockquote>
+<p>Functions: operations that take one or more pieces of data as arguments e.g. <code>type('hello')</code>, <code>len('world')</code>
+Methods: attached to a piece of data and called from it using a . to seperate the data from the method e.g. <code>'Hello World'.split()</code> or <code>'abc'.upper()</code>.</p>
+</blockquote>
+<p>In C#, it is more common to use methods for both concepts e.g. <code>PrintResults(result);</code>, <code>result.ToString();</code>.</p>
+<p>Using a split terminal in vscode you can navigate through intro stuff rather quickly.</p>
+<p><img src="/images/vscode-python-split-terminal.png" alt="split terminal"></p>
+<p>Moving on we read about a few built in functions:</p>
+<ul>
+<li><code>help(x)</code></li>
+<li><code>dir(x)</code></li>
+<li><code>type(x)</code></li>
+<li><code>print</code></li>
+<li><code>hasattr(a,b)</code></li>
+<li><code>getattr</code></li>
+<li><code>id</code></li>
+<li><code>input</code></li>
+</ul>
+<p>Followed up with other fuctions that only work with number and string types:</p>
+<ul>
+<li><code>abs</code>, <code>round</code>, <code>float</code>, <code>max</code>, <code>min</code>, <code>pow</code>, <code>chr</code>, <code>divmod</code></li>
+<li><code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code></li>
+<li><code>len</code>, <code>min</code>, <code>max</code>, <code>ord</code></li>
+<li><code>+</code>, <code>*</code>, <code>in</code></li>
+<li><code>strip</code>, <code>split</code>, <code>startswith</code>, <code>upper</code>, <code>find</code>, <code>index</code></li>
+</ul>
+<hr>
+<h1 id="lesson02">Lesson02</h1>
+<p>Coming soon!</p>
+]]></content>
+        </item>
         
         <item>
             <title>pscp and psftp are your friends</title>

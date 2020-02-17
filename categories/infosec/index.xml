@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>infosec on Troy Hamilton</title>
+    <link>https://troyhamilton.cloud/categories/infosec/</link>
+    <description>Recent content in infosec on Troy Hamilton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 16 Feb 2020 10:36:53 -0500</lastBuildDate>
+    
+	<atom:link href="https://troyhamilton.cloud/categories/infosec/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>This post is brought to you by the letters NSA</title>
+      <link>https://troyhamilton.cloud/posts/2020/02/this-post-is-brought-to-you-by-the-letters-nsa/</link>
+      <pubDate>Sun, 16 Feb 2020 10:36:53 -0500</pubDate>
+      
+      <guid>https://troyhamilton.cloud/posts/2020/02/this-post-is-brought-to-you-by-the-letters-nsa/</guid>
+      <description>In 1997 I recall my VB6 college professor Mr. Shroff asked us to name a programming language. At the time I was studying for my AA in Electronic Engineering but I was also working at CompUSA which is probably the best job I ever had. It was the catalyst for me into IT. Anyway, Mr. Shroff looks at me, asks me to name a language, and after a brief moment I remember chatting with Brandon at the upgrades counter at work and his new jump on Python.</description>
+    </item>
+    
+  </channel>
+</rss>
