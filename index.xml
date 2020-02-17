@@ -21,9 +21,19 @@
     </item>
     
     <item>
+      <title>When in doubt, check your routes</title>
+      <link>https://troyhamilton.cloud/posts/2020/02/when-in-doubt-check-your-routes/</link>
+      <pubDate>Sat, 01 Feb 2020 07:54:43 -0500</pubDate>
+      
+      <guid>https://troyhamilton.cloud/posts/2020/02/when-in-doubt-check-your-routes/</guid>
+      <description>One of the cool things you can do when launching aws ec2 instances is add a configuration script that will run during launch. From the launch configuration wizard, this script is on the &amp;lsquo;Configure Instance Details&amp;rsquo; step under &amp;lsquo;Advanced Details&amp;rsquo;. A common script that I&amp;rsquo;ve been using lately with all of my labs is installing, starting, and enabling the apache web server aka httpd.
+#!/bin/bash sudo yum update -y sudo yum install -y httpd php sudo systemctl start httpd sudo systemctl enable httpd This is just a batch script that will update yum, install apache and php, start the httpd daemon and enable it to start on next boot.</description>
+    </item>
+    
+    <item>
       <title>pscp and psftp are your friends</title>
       <link>https://troyhamilton.cloud/posts/2020/01/pscp-and-psftp-are-your-friends/</link>
-      <pubDate>Sat, 04 Jan 2020 07:54:43 -0500</pubDate>
+      <pubDate>Sat, 25 Jan 2020 07:54:43 -0500</pubDate>
       
       <guid>https://troyhamilton.cloud/posts/2020/01/pscp-and-psftp-are-your-friends/</guid>
       <description>As magical as Hugo is, I couldn&amp;rsquo;t get the github deployment to work cleanly no matter how much I followed the official deployment guide on Windows 10 1809. When adding the submodule for the blog repo, this error kept pestering me:
@@ -31,19 +41,9 @@
     </item>
     
     <item>
-      <title>When in doubt, check your routes</title>
-      <link>https://troyhamilton.cloud/posts/2020/01/when-in-doubt-check-your-routes/</link>
-      <pubDate>Sat, 04 Jan 2020 07:54:43 -0500</pubDate>
-      
-      <guid>https://troyhamilton.cloud/posts/2020/01/when-in-doubt-check-your-routes/</guid>
-      <description>One of the cool things you can do when launching aws ec2 instances is add a configuration script that will run during launch. From the launch configuration wizard, this script is on the &amp;lsquo;Configure Instance Details&amp;rsquo; step under &amp;lsquo;Advanced Details&amp;rsquo;. A common script that I&amp;rsquo;ve been using lately with all of my labs is installing, starting, and enabling the apache web server aka httpd.
-#!/bin/bash sudo yum update -y sudo yum install -y httpd php sudo systemctl start httpd sudo systemctl enable httpd This is just a batch script that will update yum, install apache and php, start the httpd daemon and enable it to start on next boot.</description>
-    </item>
-    
-    <item>
       <title>All the hugs for Hugo</title>
       <link>https://troyhamilton.cloud/posts/2020/01/all-the-hugs-for-hugo/</link>
-      <pubDate>Fri, 03 Jan 2020 13:52:23 -0500</pubDate>
+      <pubDate>Sat, 18 Jan 2020 13:52:23 -0500</pubDate>
       
       <guid>https://troyhamilton.cloud/posts/2020/01/all-the-hugs-for-hugo/</guid>
       <description>I am not a front end developer&amp;hellip;
@@ -56,7 +56,7 @@ Before Hugo I tried:
     <item>
       <title>Fun with AWS EC2 and puTTy</title>
       <link>https://troyhamilton.cloud/posts/2020/01/fun-with-aws-ec2-and-putty/</link>
-      <pubDate>Thu, 02 Jan 2020 13:52:16 -0500</pubDate>
+      <pubDate>Sat, 11 Jan 2020 13:52:16 -0500</pubDate>
       
       <guid>https://troyhamilton.cloud/posts/2020/01/fun-with-aws-ec2-and-putty/</guid>
       <description>In preparation for SAA-C01 I wanted to start looking into moving my site from Github+Netlify to EC2+S3+Jenkins. So I go to ssh into my free-tier instance from PuTTy on win10 and I get:
