@@ -67,8 +67,27 @@ Methods: attached to a piece of data and called from it using a . to seperate th
 </ul>
 <hr>
 <h1 id="lesson02">Lesson02</h1>
-<p>Coming soon!</p>
-]]></content>
+<p>Here come the variables!  Very useful stuff here like:</p>
+<ul>
+<li>Finding current variables in use with <code>dir()</code></li>
+<li>Type checking with <code>isinstance()</code></li>
+<li>Conversions like <code>a = &quot;3.14&quot; b = float(a) type (b)</code></li>
+<li>A brief example for an array <code>l = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]</code></li>
+</ul>
+<p>Where lesson02 shines is talking about making your own functions.</p>
+<pre><code>def first_func(x):
+      return x*2
+
+first_func(10)
+first_func('hello')
+</code></pre><p><img src="/images/python-idle.png" alt="python idle"></p>
+<p>Gotta love a little bit of enthusiasm here from the NSA:</p>
+<blockquote>
+<p>Wow&hellip; Python REALLY does not care about types.  Here is the simplest function that you can write in Python (no imput, no output, and mot much else!)</p>
+</blockquote>
+<pre><code>def simple():
+      pass
+</code></pre>]]></content>
         </item>
         
         <item>
