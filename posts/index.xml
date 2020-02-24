@@ -36,7 +36,7 @@
 </ul>
 <p>As with most Python tutorials, Week 1 begins with an introduction which calls for an installation of <a href="https://www.anaconda.com/distribution/">Anaconda</a>, specifically version 4.4.0.  Anaconda is one of the largest Python distributions that give you access to all the libraries, dependencies, packages, and environments that you&rsquo;ll need for this lesson and probably any project a beginner would be involved in.</p>
 <hr>
-<h1 id="lesson01">Lesson01</h1>
+<h1 id="lesson01---intro">Lesson01 - Intro</h1>
 <p>So what&rsquo;s covered in Lesson 01?  It starts off with &lsquo;Basic Basics: Data and Operations&rsquo; and explaining basic data types such as integers, floats, complexes, strings, and booleans.  We perform data operations against data types with operators, functions, and methods.</p>
 <p>I like how they make a distinction between functions and methods:</p>
 <blockquote>
@@ -66,13 +66,13 @@ Methods: attached to a piece of data and called from it using a . to seperate th
 <li><code>strip</code>, <code>split</code>, <code>startswith</code>, <code>upper</code>, <code>find</code>, <code>index</code></li>
 </ul>
 <hr>
-<h1 id="lesson02">Lesson02</h1>
+<h1 id="lesson02---variables-and-functions">Lesson02 - Variables and Functions</h1>
 <p>Here come the variables!  Very useful stuff here like:</p>
 <ul>
 <li>Finding current variables in use with <code>dir()</code></li>
 <li>Type checking with <code>isinstance()</code></li>
 <li>Conversions like <code>a = &quot;3.14&quot; b = float(a) type (b)</code></li>
-<li>A brief example for an array <code>l = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]</code></li>
+<li>A brief example for an array but apparently they&rsquo;re called containers in Python <code>l = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]</code></li>
 </ul>
 <p>Where lesson02 shines is talking about making your own functions.</p>
 <pre><code>def first_func(x):
@@ -87,6 +87,45 @@ first_func('hello')
 </blockquote>
 <pre><code>def simple():
       pass
+</code></pre><hr>
+<h1 id="lesson03---flow-control">Lesson03 - Flow Control</h1>
+<p>Flow control is in every programming language.</p>
+<p>A quick if statement:</p>
+<pre><code>def even(n):
+  if (type(n) != int):
+    print('Only numbers please bro')
+  elif (n % 2 == 0):
+    print('Even!')
+  else:
+    print('Not even!')
+</code></pre><p>A while loop:</p>
+<pre><code>i = 0
+
+while (i &lt;= 20):
+  print(i)
+  i += 1 /**No use of i++?**/
+</code></pre><p>Don&rsquo;t forget about break and continue!</p>
+<pre><code>i = 0
+
+while(True):
+  i += 1
+  print(i)
+  if (i == 10):
+    print(&quot;I'm a 10&quot;)
+    continue
+  print(i)
+  if (i == 20):
+    break
+</code></pre><p>Some for loop action:</p>
+<pre><code>for i in [1,2,3,4,5,'a','b','c']:
+  print(i)
+</code></pre><hr>
+<h1 id="lesson04---container-data-types">Lesson04 - Container Data Types</h1>
+<p>This isn&rsquo;t a generic lesson.  Or is it?  Some of the containers discussed here are list, tuple, dict, set, frozenset.</p>
+<p>Starting out the containers is the list():</p>
+<pre><code>stuff = ['spam', 'eggs',5,3.2,[100,200,300]]
+</code></pre><p>Containers have several methods at their disposal like append, insert, extend, remove</p>
+<pre><code>stuff.append('cherry')
 </code></pre>]]></content>
         </item>
         

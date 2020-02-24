@@ -43,7 +43,7 @@
 <meta itemprop="description" content="In 1997 I recall my VB6 college professor Mr. Shroff asked us to name a programming language. At the time I was studying for my AA in Electronic Engineering but I was also working at CompUSA which is probably the best job I ever had. It was the catalyst for me into IT. Anyway, Mr. Shroff looks at me, asks me to name a language, and after a brief moment I remember chatting with Brandon at the upgrades counter at work and his new jump on Python.">
 <meta itemprop="datePublished" content="2020-02-16T10:36:53-05:00" />
 <meta itemprop="dateModified" content="2020-02-16T10:36:53-05:00" />
-<meta itemprop="wordCount" content="658">
+<meta itemprop="wordCount" content="810">
 <meta itemprop="image" content="https://troyhamilton.cloud"/>
 
 
@@ -153,7 +153,7 @@
 </ul>
 <p>As with most Python tutorials, Week 1 begins with an introduction which calls for an installation of <a href="https://www.anaconda.com/distribution/">Anaconda</a>, specifically version 4.4.0.  Anaconda is one of the largest Python distributions that give you access to all the libraries, dependencies, packages, and environments that you&rsquo;ll need for this lesson and probably any project a beginner would be involved in.</p>
 <hr>
-<h1 id="lesson01">Lesson01</h1>
+<h1 id="lesson01---intro">Lesson01 - Intro</h1>
 <p>So what&rsquo;s covered in Lesson 01?  It starts off with &lsquo;Basic Basics: Data and Operations&rsquo; and explaining basic data types such as integers, floats, complexes, strings, and booleans.  We perform data operations against data types with operators, functions, and methods.</p>
 <p>I like how they make a distinction between functions and methods:</p>
 <blockquote>
@@ -183,13 +183,13 @@ Methods: attached to a piece of data and called from it using a . to seperate th
 <li><code>strip</code>, <code>split</code>, <code>startswith</code>, <code>upper</code>, <code>find</code>, <code>index</code></li>
 </ul>
 <hr>
-<h1 id="lesson02">Lesson02</h1>
+<h1 id="lesson02---variables-and-functions">Lesson02 - Variables and Functions</h1>
 <p>Here come the variables!  Very useful stuff here like:</p>
 <ul>
 <li>Finding current variables in use with <code>dir()</code></li>
 <li>Type checking with <code>isinstance()</code></li>
 <li>Conversions like <code>a = &quot;3.14&quot; b = float(a) type (b)</code></li>
-<li>A brief example for an array <code>l = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]</code></li>
+<li>A brief example for an array but apparently they&rsquo;re called containers in Python <code>l = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]</code></li>
 </ul>
 <p>Where lesson02 shines is talking about making your own functions.</p>
 <pre><code>def first_func(x):
@@ -204,6 +204,45 @@ first_func('hello')
 </blockquote>
 <pre><code>def simple():
       pass
+</code></pre><hr>
+<h1 id="lesson03---flow-control">Lesson03 - Flow Control</h1>
+<p>Flow control is in every programming language.</p>
+<p>A quick if statement:</p>
+<pre><code>def even(n):
+  if (type(n) != int):
+    print('Only numbers please bro')
+  elif (n % 2 == 0):
+    print('Even!')
+  else:
+    print('Not even!')
+</code></pre><p>A while loop:</p>
+<pre><code>i = 0
+
+while (i &lt;= 20):
+  print(i)
+  i += 1 /**No use of i++?**/
+</code></pre><p>Don&rsquo;t forget about break and continue!</p>
+<pre><code>i = 0
+
+while(True):
+  i += 1
+  print(i)
+  if (i == 10):
+    print(&quot;I'm a 10&quot;)
+    continue
+  print(i)
+  if (i == 20):
+    break
+</code></pre><p>Some for loop action:</p>
+<pre><code>for i in [1,2,3,4,5,'a','b','c']:
+  print(i)
+</code></pre><hr>
+<h1 id="lesson04---container-data-types">Lesson04 - Container Data Types</h1>
+<p>This isn&rsquo;t a generic lesson.  Or is it?  Some of the containers discussed here are list, tuple, dict, set, frozenset.</p>
+<p>Starting out the containers is the list():</p>
+<pre><code>stuff = ['spam', 'eggs',5,3.2,[100,200,300]]
+</code></pre><p>Containers have several methods at their disposal like append, insert, extend, remove</p>
+<pre><code>stuff.append('cherry')
 </code></pre>
             </div>
         </article>
@@ -215,7 +254,7 @@ first_func('hello')
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://troyhamilton.cloud/tags/python">python</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>658 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>810 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-02-16 10:36 -0500</p>
         </div>
