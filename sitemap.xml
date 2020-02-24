@@ -3,17 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://troyhamilton.cloud/categories/</loc>
-    <lastmod>2020-02-16T10:36:53-05:00</lastmod>
+    <loc>https://troyhamilton.cloud/tags/ansible/</loc>
+    <lastmod>2020-02-23T20:47:57-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://troyhamilton.cloud/categories/infosec/</loc>
-    <lastmod>2020-02-16T10:36:53-05:00</lastmod>
+    <loc>https://troyhamilton.cloud/categories/aws/</loc>
+    <lastmod>2020-02-23T20:47:57-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton.cloud/categories/</loc>
+    <lastmod>2020-02-23T20:47:57-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton.cloud/posts/2020/02/not-your-typical-aa-meeting-hanging-out-with-ansible-and-aws/</loc>
+    <lastmod>2020-02-23T20:47:57-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://troyhamilton.cloud/posts/</loc>
+    <lastmod>2020-02-23T20:47:57-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton.cloud/tags/</loc>
+    <lastmod>2020-02-23T20:47:57-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton.cloud/</loc>
+    <lastmod>2020-02-23T20:47:57-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://troyhamilton.cloud/categories/infosec/</loc>
     <lastmod>2020-02-16T10:36:53-05:00</lastmod>
   </url>
   
@@ -23,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://troyhamilton.cloud/tags/</loc>
-    <lastmod>2020-02-16T10:36:53-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://troyhamilton.cloud/posts/2020/02/this-post-is-brought-to-you-by-the-letters-nsa/</loc>
-    <lastmod>2020-02-16T10:36:53-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://troyhamilton.cloud/</loc>
     <lastmod>2020-02-16T10:36:53-05:00</lastmod>
   </url>
   
