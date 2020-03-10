@@ -45,99 +45,34 @@
 <li>Lesson 10: Iterators, Generators, and Duck Typing</li>
 <li>Lesson 11: String Formatting</li>
 </ul>
-<p>As with most Python tutorials, Week 1 begins with an introduction which calls for an installation of <a href="https://www.anaconda.com/distribution/">Anaconda</a>, specifically version 4.4.0.  Anaconda is one of the largest Python distributions that give you access to all the libraries, dependencies, packages, and environments that you&rsquo;ll need for this lesson and probably any project a beginner would be involved in.</p>
-<hr>
-<h1 id="lesson01---intro">Lesson01 - Intro</h1>
-<p>So what&rsquo;s covered in Lesson 01?  It starts off with &lsquo;Basic Basics: Data and Operations&rsquo; and explaining basic data types such as integers, floats, complexes, strings, and booleans.  We perform data operations against data types with operators, functions, and methods.</p>
-<p>I like how they make a distinction between functions and methods:</p>
-<blockquote>
-<p>Functions: operations that take one or more pieces of data as arguments e.g. <code>type('hello')</code>, <code>len('world')</code>
-Methods: attached to a piece of data and called from it using a . to seperate the data from the method e.g. <code>'Hello World'.split()</code> or <code>'abc'.upper()</code>.</p>
-</blockquote>
-<p>In C#, it is more common to use methods for both concepts e.g. <code>PrintResults(result);</code>, <code>result.ToString();</code>.</p>
-<p>Using a split terminal in vscode you can navigate through intro stuff rather quickly.</p>
-<p><img src="/images/vscode-python-split-terminal.png" alt="split terminal"></p>
-<p>Moving on we read about a few built in functions:</p>
+<p>And the breakdown for Week 2:</p>
 <ul>
-<li><code>help(x)</code></li>
-<li><code>dir(x)</code></li>
-<li><code>type(x)</code></li>
-<li><code>print</code></li>
-<li><code>hasattr(a,b)</code></li>
-<li><code>getattr</code></li>
-<li><code>id</code></li>
-<li><code>input</code></li>
+<li>Lesson 01: Collections and Itertools</li>
+<li>Lesson 02: Command Line Arguments</li>
+<li>Lesson 03: Dates and Times</li>
+<li>Lesson 04: Interactive User Input with ipywidgets</li>
+<li>Lesson 05: GUI basics with Tkinter</li>
+<li>Lesson 06: Logging</li>
+<li>Lesson 07: Math and More</li>
+<li>Lesson 08: Visualization</li>
+<li>Lesson 09: Pandas</li>
+<li>Lesson 10: A Bit about Geos</li>
+<li>Lesson 12: My First Web Application</li>
+<li>Lesson 13: Network Communication Over HTTPS and Sockets (/me smiles)</li>
+<li>Lesson 14: HTML Processing and BeautifulSoup</li>
+<li>Lesson 15: Operations with Compression and Archives</li>
+<li>Lesson 16: Regular Expressions (/me shudders)</li>
+<li>Lesson 17: Hashes</li>
+<li>Lesson 18: SQL and Python</li>
+<li>Lesson 19: Structured Data: CSV, XML, and JSON</li>
+<li>Lesson 20: System Interaction</li>
+<li>Lesson 21: Threading and Subprocesses</li>
+<li>Lesson 22: Machine Learning Introduction</li>
 </ul>
-<p>Followed up with other fuctions that only work with number and string types:</p>
-<ul>
-<li><code>abs</code>, <code>round</code>, <code>float</code>, <code>max</code>, <code>min</code>, <code>pow</code>, <code>chr</code>, <code>divmod</code></li>
-<li><code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code></li>
-<li><code>len</code>, <code>min</code>, <code>max</code>, <code>ord</code></li>
-<li><code>+</code>, <code>*</code>, <code>in</code></li>
-<li><code>strip</code>, <code>split</code>, <code>startswith</code>, <code>upper</code>, <code>find</code>, <code>index</code></li>
-</ul>
-<hr>
-<h1 id="lesson02---variables-and-functions">Lesson02 - Variables and Functions</h1>
-<p>Here come the variables!  Very useful stuff here like:</p>
-<ul>
-<li>Finding current variables in use with <code>dir()</code></li>
-<li>Type checking with <code>isinstance()</code></li>
-<li>Conversions like <code>a = &quot;3.14&quot; b = float(a) type (b)</code></li>
-<li>A brief example for an array but apparently they&rsquo;re called containers in Python <code>l = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]</code></li>
-</ul>
-<p>Where lesson02 shines is talking about making your own functions.</p>
-<pre><code>def first_func(x):
-      return x*2
-
-first_func(10)
-first_func('hello')
-</code></pre><p><img src="/images/python-idle.png" alt="python idle"></p>
-<p>Gotta love a little bit of enthusiasm here from the NSA:</p>
-<blockquote>
-<p>Wow&hellip; Python REALLY does not care about types.  Here is the simplest function that you can write in Python (no imput, no output, and mot much else!)</p>
-</blockquote>
-<pre><code>def simple():
-      pass
-</code></pre><hr>
-<h1 id="lesson03---flow-control">Lesson03 - Flow Control</h1>
-<p>Flow control is in every programming language.</p>
-<p>A quick if statement:</p>
-<pre><code>def even(n):
-  if (type(n) != int):
-    print('Only numbers please bro')
-  elif (n % 2 == 0):
-    print('Even!')
-  else:
-    print('Not even!')
-</code></pre><p>A while loop:</p>
-<pre><code>i = 0
-
-while (i &lt;= 20):
-  print(i)
-  i += 1 /**No use of i++?**/
-</code></pre><p>Don&rsquo;t forget about break and continue!</p>
-<pre><code>i = 0
-
-while(True):
-  i += 1
-  print(i)
-  if (i == 10):
-    print(&quot;I'm a 10&quot;)
-    continue
-  print(i)
-  if (i == 20):
-    break
-</code></pre><p>Some for loop action:</p>
-<pre><code>for i in [1,2,3,4,5,'a','b','c']:
-  print(i)
-</code></pre><hr>
-<h1 id="lesson04---container-data-types">Lesson04 - Container Data Types</h1>
-<p>This isn&rsquo;t a generic lesson.  Or is it?  Some of the containers discussed here are list, tuple, dict, set, frozenset.</p>
-<p>Starting out the containers is the list():</p>
-<pre><code>stuff = ['spam', 'eggs',5,3.2,[100,200,300]]
-</code></pre><p>Containers have several methods at their disposal like append, insert, extend, remove</p>
-<pre><code>stuff.append('cherry')
-</code></pre>]]></content>
+<p>Damn, that&rsquo;s a lot of great material especially week 2!</p>
+<p>I&rsquo;ve been having a lot of fun in AWS lately and there is a definite need for Python there especially with automation.</p>
+<p>So what are you waiting for, grab that pdf and start labbing!</p>
+]]></content>
         </item>
         
         <item>
